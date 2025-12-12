@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Vineeth V — Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vineeth V — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="header">
@@ -16,81 +16,107 @@
         <p class="subtitle">SAP BW/4HANA Consultant | Datasphere | SAC | HANA Modeling</p>
       </div>
     </div>
-    <nav class="nav">
+
+    <nav class="nav" aria-label="Primary navigation">
       <a href="#about">About</a>
-      <a href="#stats">Stats</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#highlights">Highlights</a>
+      <a href="#showcase">Showcase</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap main">
-  <section id="about" class="hero card">
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="hero card" aria-labelledby="about-heading">
     <div class="hero-left">
-      <h2>About Me</h2>
-      <p class="lead">SAP BW/4HANA Consultant with ~4.5 years of experience designing data warehousing solutions, optimizing HANA memory through DTO, building calculation views, and delivering analytics in SAP Analytics Cloud. I focus on translating business requirements into scalable data models and automations using Python and SQL.</p>
+      <h2 id="about-heading">About Me</h2>
+
+      <p class="lead">
+        I am a Data & Analytics professional specializing in SAP BW/4HANA with ~4.5 years of hands-on experience
+        building enterprise-grade data warehousing solutions. My work focuses on data modelling (ADSO & composite providers),
+        HANA-native calculation views, Datasphere migrations, ETL automation (Python & SQL) and Data Tiering Optimization (DTO)
+        to reduce HANA footprint while maintaining query performance. I’ve delivered DTO solutions that reclaimed terabytes of hot
+        memory and improved overall reporting performance by applying modeling, temperature maintenance and calculation-view tuning.
+        (Resume details). :contentReference[oaicite:0]{index=0}
+      </p>
+
+      <p class="lead muted">
+        I enjoy converting complex business requirements into performant analytical models and user-friendly dashboards — plus automations that save time.
+      </p>
+
       <div class="quick-links">
-        <a class="btn" href="Resume 12-12-2025.pdf" target="_blank">Download Resume</a>
-        <a class="btn" href="highlights.html">Showcase</a>
+        <a class="btn" href="Resume 12-12-2025.pdf" target="_blank" aria-label="Download resume">Download Resume</a>
+        <a class="btn ghost" href="highlights.html" aria-label="View showcase">Showcase</a>
       </div>
     </div>
-    <div class="hero-right">
+
+    <aside class="hero-right" aria-labelledby="contact-heading">
+
       <div class="card contact-card">
-        <h3>Contact</h3>
+        <h3 id="contact-heading">Contact</h3>
         <p><strong>Email:</strong> <a href="mailto:vineethkumar997@gmail.com">vineethkumar997@gmail.com</a></p>
         <p><strong>Phone:</strong> <a href="tel:+918281786504">+91 8281786504</a></p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vineeth-kumar-9102b3131" target="_blank">vineeth-kumar-9102b3131</a></p>
       </div>
+
       <div class="card mini-card">
         <h4>Core</h4>
-        <p>SAP BW4/HANA • Datasphere • SAC • HANA Modeling • SQL</p>
+        <p>SAP BW4/HANA • Datasphere • SAC • HANA Modeling • SQL • Python</p>
       </div>
-    </div>
+
+      <!-- STAT CARDS -->
+      <div class="card stats-compact" aria-hidden="false">
+        <div class="stats-grid">
+          <div class="stat-card stat-top" role="img" aria-label="Years of experience">
+            <div class="stat-value" data-target="4.5">4.5+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+
+          <div class="stat-card stat-top" role="img" aria-label="Data optimized">
+            <div class="stat-value" data-target="3">3 TB</div>
+            <div class="stat-label">Data Optimized</div>
+          </div>
+
+          <div class="stat-card stat-top" role="img" aria-label="Performance boost">
+            <div class="stat-value" data-target="20">20%</div>
+            <div class="stat-label">Performance Boost</div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
   </section>
 
-  <section id="stats" class="card stats">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-value" data-suffix="+">4.5+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">3 TB</div>
-        <div class="stat-label">Data Optimized</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">20%</div>
-        <div class="stat-label">Performance Boost</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="card">
-    <h2>Skills & Tools</h2>
+  <!-- SKILLS -->
+  <section id="skills" class="card" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills & Tools</h2>
     <div class="skills-wrap">
-      <div class="skill-pill">SAP BW/4HANA</div>
-      <div class="skill-pill">SAP Native HANA</div>
-      <div class="skill-pill">SAP Datasphere</div>
-      <div class="skill-pill">SAP Analytics Cloud</div>
-      <div class="skill-pill">SQL </div>
+      <div class="skill-pill">SAP BW/4HANA (ADSO, Composite Providers)</div>
+      <div class="skill-pill">SAP Native HANA (Calculation Views)</div>
+      <div class="skill-pill">SAP Datasphere (Migration & Integration)</div>
+      <div class="skill-pill">SAP Analytics Cloud (Dashboards)</div>
+      <div class="skill-pill">SQL — Query Optimization</div>
+      <div class="skill-pill">Python — Automation & Scripting</div>
       <div class="skill-pill">DTO & Temperature Management</div>
-      <div class="skill-pill">Performance Tuning</div>
+      <div class="skill-pill">Performance Tuning & PlanViz</div>
     </div>
   </section>
 
-  <section id="experience" class="card timeline">
-    <h2>Professional Experience</h2>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="card timeline" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Professional Experience</h2>
+
     <div class="timeline-item">
       <div class="t-left">BW Consultant — Vodafone, Quess Corp</div>
       <div class="t-right">
         <div class="t-time">Sept 2025 - Present</div>
         <ul>
-          <li>Support team activities, Datasphere dataflow & task chain creation.</li>
-          <li>CDS view creation for Datasphere migration; BW support activities.</li>
+          <li>Support & maintenance, Datasphere dataflow & task chain creation, CDS view creation for migration.</li>
+          <li>Operational support and performance checks for reporting objects.</li>
         </ul>
       </div>
     </div>
@@ -100,8 +126,8 @@
       <div class="t-right">
         <div class="t-time">Jan 2025 - Sept 2025</div>
         <ul>
-          <li>Key contributor to DTO & NSE; reduced over 3 TB from hot tier, saving HANA memory.</li>
-          <li>ADSO remodeling, temperature maintenance, calculation view optimizations.</li>
+          <li>Contributor for DTO & NSE: identified cold/warm data candidates and reduced &gt;3 TB from hot tier.</li>
+          <li>ADSO remodeling, temperature maintenance, and calculation view validation/optimization.</li>
         </ul>
       </div>
     </div>
@@ -111,63 +137,102 @@
       <div class="t-right">
         <div class="t-time">Apr 2021 - Dec 2024</div>
         <ul>
-          <li>Led monitoring team; automation with Python & SQL; performance tuning giving ~20% improvements.</li>
-          <li>Migration activities from legacy BW to BW/4HANA, Plan Viz optimizations.</li>
+          <li>Led monitoring team, automated monitoring & validation using Python/SQL, improved performance by ~20%.</li>
+          <li>Migration from legacy BW objects to BW/4HANA-compatible models; PlanViz-based tuning.</li>
         </ul>
       </div>
     </div>
+
   </section>
 
-  <section id="projects" class="card projects">
-    <h2>Projects & Publications</h2>
+  <!-- PROJECTS & PUBLICATIONS -->
+  <section id="projects" class="card" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Projects & Publications</h2>
+
     <div class="project-list">
       <div class="project">
         <h3>Flood Detection using Deep Learning</h3>
         <p>Flood depth detection using nearby objects with 95% accuracy. <a href="https://ieeexplore.ieee.org/document/9708240" target="_blank">IEEE Link</a></p>
       </div>
+
       <div class="project">
         <h3>Cog Shift</h3>
-        <p>Vehicle performance monitoring system with real-time messaging.</p>
+        <p>Vehicle performance monitoring system with real-time messaging and telemetry.</p>
       </div>
+
       <div class="project">
         <h3>Brain Shift</h3>
-        <p>Song recommendation based on brainwave sensors.</p>
+        <p>Song recommendation engine based on brainwave sensor inputs.</p>
       </div>
     </div>
   </section>
 
-  <section id="highlights" class="card">
-    <h2>Highlights</h2>
-    <div class="gallery">
-      <div class="g-item placeholder"><div class="ph">"SAC Cert.jpg"</div></div>
-      <div class="g-item placeholder"><div class="ph">"Ace Award.jpg"</div></div>
-      <div class="g-item placeholder"><div class="ph">"DS.jpg"</div></div>
-      <div class="g-item placeholder"><div class="ph">"JAV.jpg"</div></div>
+  <!-- SHOWCASE -->
+  <section id="showcase" class="card" aria-labelledby="showcase-heading">
+    <h2 id="showcase-heading">Showcase</h2>
+    <p class="muted">Screenshots, certificates, dashboard images and client appreciations. Click any image to view full size.</p>
 
+    <div class="gallery">
+      <div class="g-item"><img src="SAC Cert.jpg" alt="SAC Certificate"><p>SAC Certificate</p></div>
+      <div class="g-item"><img src="Ace Award.jpg" alt="Ace Award"><p>Ace Award</p></div>
+      <div class="g-item"><img src="DS.jpg" alt="Client Appreciation DS"><p>Client Appreciation — DS</p></div>
+      <div class="g-item"><img src="JAV.jpg" alt="Client Appreciation JAV"><p>Client Appreciation — JAV</p></div>
+
+      <!-- Dashboard / Project screenshots (optional) -->
+      <div class="g-item"><img src="dashboard1.jpg" alt="Dashboard 1"><p>Dashboard — DTO Analysis</p></div>
+      <div class="g-item"><img src="dashboard2.jpg" alt="Dashboard 2"><p>Dashboard — SLA Monitoring</p></div>
     </div>
   </section>
 
-  <section id="contact" class="card contact-section">
-    <h2>Get in touch</h2>
-    <p>If you like my profile, reach out — I am open to opportunities and collaborations.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="card contact-section" aria-labelledby="contact-section-heading">
+    <h2 id="contact-section-heading">Get in touch</h2>
+    <p>If you'd like to discuss opportunities, collaborations or a technical deep-dive, feel free to reach out.</p>
+
     <div class="contact-cta">
       <a class="btn" href="mailto:vineethkumar997@gmail.com">Email Me</a>
       <a class="btn ghost" href="tel:+918281786504">Call</a>
     </div>
   </section>
+
 </main>
 
 <footer class="footer">
   <div class="wrap">
-    <p>&copy; {datetime.now().year} Vineeth V — Portfolio</p>
+    <p>&copy; 2025 Vineeth V — Portfolio</p>
   </div>
 </footer>
 
+<!-- Interactivity: stat count-up and simple lightbox (open image in new tab) -->
 <script>
-// simple stat hover animation
-document.querySelectorAll('.stat-card').forEach(card => {
-  card.addEventListener('mouseenter', ()=> card.classList.add('hover'));
-  card.addEventListener('mouseleave', ()=> card.classList.remove('hover'));
+function countUp(el, target, duration = 900) {
+  const isFloat = String(target).includes('.');
+  const start = 0;
+  const startTime = performance.now();
+  function tick(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    let value = start + (target - start) * progress;
+    if (!isFloat) value = Math.floor(value);
+    el.textContent = isFloat ? (Math.round(value*10)/10) + (el.dataset.suffix || '') : value + (el.dataset.suffix || '');
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.stat-card .stat-value').forEach(function(el){
+    const txt = el.getAttribute('data-target') || el.textContent.trim();
+    const num = parseFloat(txt);
+    setTimeout(function(){ countUp(el, num, 900); }, 200);
+  });
+
+  document.querySelectorAll('.gallery .g-item img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      const src = img.getAttribute('src');
+      window.open(src, '_blank');
+    });
+  });
 });
 </script>
 
