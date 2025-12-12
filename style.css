@@ -1,5 +1,4 @@
-
-/* Light-only professional portfolio style */
+/* style.css — light professional portfolio */
 :root{
   --bg: #f6f8fb;
   --card: #ffffff;
@@ -29,8 +28,9 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; backgro
 /* main layout */
 .main{display:grid;gap:18px}
 .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(11,18,32,0.03)}
-.hero{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
-.hero .lead{color:var(--muted);line-height:1.6}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+.lead{color:var(--muted);line-height:1.6}
+.muted{color:var(--muted)}
 .quick-links{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-block;padding:8px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff; text-decoration:none;font-weight:700;margin-right:8px;box-shadow:0 8px 20px rgba(14,165,164,0.08)}
 .btn.ghost{background:transparent;border:1px solid rgba(11,18,32,0.06);color:var(--muted)}
@@ -39,12 +39,13 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; backgro
 .contact-card h3{margin:0 0 8px 0}
 .mini-card{margin-top:12px;padding:12px}
 
-/* stats */
-.stats-grid{display:flex;gap:16px;justify-content:space-between;align-items:center}
-.stat-card{flex:1;background:linear-gradient(180deg, rgba(37,99,235,0.03), rgba(14,165,164,0.02));padding:20px;border-radius:10px;text-align:center;border:1px solid rgba(11,18,32,0.03);transition:transform 220ms ease, box-shadow 220ms ease}
+/* stats compact */
+.stats-compact{padding:12px}
+.stats-grid{display:flex;gap:10px;justify-content:space-between;align-items:center}
+.stat-card{flex:1;background:linear-gradient(180deg, rgba(37,99,235,0.03), rgba(14,165,164,0.02));padding:14px;border-radius:10px;text-align:center;border:1px solid rgba(11,18,32,0.03);transition:transform 220ms ease, box-shadow 220ms ease}
 .stat-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,18,32,0.08)}
-.stat-value{font-size:34px;font-weight:800;color:var(--accent-2);margin-bottom:6px}
-.stat-label{color:var(--muted)}
+.stat-value{font-size:24px;font-weight:800;color:var(--accent-2);margin-bottom:6px}
+.stat-label{color:var(--muted);font-size:13px}
 
 /* skills */
 .skills-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
@@ -63,7 +64,8 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; backgro
 /* gallery */
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
 .g-item{background:var(--soft);border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:110px;border:1px solid rgba(11,18,32,0.03)}
-.g-item img{max-width:100%;max-height:80px;object-fit:contain}
+.g-item img{max-width:100%;max-height:110px;object-fit:contain;border-radius:6px}
+.g-item p{margin:8px 0 0 0;font-weight:700;color:var(--muted)}
 .placeholder .ph{color:var(--muted);font-weight:700}
 
 /* contact */
@@ -73,8 +75,14 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; backgro
 .footer{margin-top:18px;padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
 
 /* responsiveness */
-@media (max-width:900px){
+@media (max-width:1000px){
   .hero{grid-template-columns:1fr; }
   .t-left{width:140px}
-  .stats-grid{flex-direction:column;align-items:stretch}
+  .stats-grid{flex-direction:row;align-items:stretch}
+}
+@media (max-width:680px){
+  .nav{display:none}
+  .stats-grid{flex-direction:column;gap:8px}
+  .brand{gap:12px}
+  .avatar{width:76px;height:76px}
 }
